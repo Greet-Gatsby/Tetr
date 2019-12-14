@@ -1,15 +1,15 @@
 package data;
 
 public class Conversion {
-	//реобразование
+	//preobrazovanie
 	
 	public static int cellToCoord(int cell) {	
-		//клетки
+		//kletki
 		return cell * 32;
 	}
 
 	public static int coordToCell(int coord) {	
-		//плоскости
+		//ploskosti
 		return coord / 32;
 	}
 }

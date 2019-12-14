@@ -61,13 +61,6 @@ public class Block {
 		try {
 			bounds = blockBuilder(type);
 
-			/*
-			 * for (int i = 0; i < bounds.length; i++) { for (int j = 0; j <
-			 * bounds[i].length; j++) { for (int k = 0; k < bounds[i][j].length; k++) {
-			 * System.out.print(bounds[i][j][k]);
-			 * 
-			 * } System.out.println(""); } System.out.println("----"); }
-			 */
 
 		} catch (FileNotFoundException e) {
 

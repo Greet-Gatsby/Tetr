@@ -40,6 +40,15 @@ public class KeyHandler implements KeyListener {
 			}
 
 			if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+				try {
+				if (!Collision.collideWithWall(Game.currentBlock, 0)
+						&& !Collision.collideWithBlock(Game.currentBlock, 0)) {
+					Game.currentBlock.setY(Game.currentBlock.getY() + 1);
+					Collision.collideWithWall(Game.currentBlock, 0);
+					}
+				} catch (Exception e2) {
+					e2.printStackTrace();
+				}
 				Game.speedup = true;
 			}
 

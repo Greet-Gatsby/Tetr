@@ -29,12 +29,13 @@ public class GameLoop extends Thread {
 						Game.spawnNewBlock = false;
 					}
 				}
-				if (!Game.speedup) {
-					sleep(1000);
-				} else {
-					sleep(100);
-				}
-
+				if (!Game.speedup) 
+					sleep(800);
+				else
+						sleep(500);
+				
+				
+				
 			} catch (InterruptedException e) {
 
 				e.printStackTrace();

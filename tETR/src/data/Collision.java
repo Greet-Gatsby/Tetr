@@ -6,9 +6,9 @@ import game.GameState;
 import io.DataHandler;
 
 public class Collision {
-// столкновение
+// stolknovenie s blokami
 	public static boolean collideWithBlock(Block b, int direction) {
-		// direction: -1 = links, 0 = runter, 1 = rechts
+		// direction: -1 = left, 0 = down, 1 = rigth
 
 		switch (direction) {
 		case -1:
@@ -77,7 +77,7 @@ public class Collision {
 	}
 
 	public static boolean collideInRotation(Block b) {
-		//столтновение в движении
+		//stolknovenie v dvizhenii
 		int rot = b.getRotation() + 1;
 		if (rot == 4) {
 			rot = 0;
@@ -120,7 +120,7 @@ public class Collision {
 	}
 
 	public static boolean collideWithWall(Block b, int direction) {
-		// столкновение со стенами
+		// stolknovenie so stenami
 		// direction: -1 = links, 0 = runter, 1 = rechts
 		switch (direction) {
 		case -1:
@@ -165,7 +165,7 @@ public class Collision {
 	}
 
 	private static void fillBlock(Block b) {
-		//заполнение блока
+		//zamolnenie
 		try {
 			for (int i = 0; i < b.getBounds()[b.getRotation()].length; i++) {
 				for (int j = 0; j < b.getBounds()[b.getRotation()][i].length; j++) {
@@ -183,7 +183,7 @@ public class Collision {
 	}
 
 	public static void checkFullRow(int multiplier) {
-		//проверка на заполненность строки
+		//proverka na zapolnenie
 
 		int blocksInRow = 0;
 
@@ -214,7 +214,6 @@ public class Collision {
 	}
 
 	private static void delRow(int row, int multiplier) {
-		//удаление строки
 
 		for (int i = 0; i < Game.map.length; i++) {
 			Game.map[i][row] = 0;

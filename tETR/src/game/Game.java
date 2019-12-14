@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Game {
 	
-	public static int score = 0, highscore = 0, scoreToAdd = 0;
+	public static int score = 0, highscore = 0, scoreToAdd = 0, speed = 100;
 	public static boolean spawnNewBlock = false, speedup = false;
 	
 	public static ArrayList<Block> blocks = new ArrayList<Block>();
